@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var shit = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        notificationController.observe("cool", object: nil) { (notification) -> Void in
+            self.shit = 2;
+        }
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        NSNotificationCenter.defaultCenter().postNotificationName("cool", object: nil)
+        println(shit)
     }
 
     override func didReceiveMemoryWarning() {

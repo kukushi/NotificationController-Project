@@ -13,6 +13,7 @@
 		529CB2021AA2CFC10069C551 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529CB2011AA2CFC10069C551 /* Images.xcassets */; };
 		529CB2051AA2CFC10069C551 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529CB2031AA2CFC10069C551 /* LaunchScreen.xib */; };
 		529CB2111AA2CFC10069C551 /* NotificationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529CB2101AA2CFC10069C551 /* NotificationControllerTests.swift */; };
+		529CB21B1AA2CFDE0069C551 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529CB21A1AA2CFDE0069C551 /* NotificationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		529CB20A1AA2CFC10069C551 /* NotificationControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		529CB20F1AA2CFC10069C551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		529CB2101AA2CFC10069C551 /* NotificationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationControllerTests.swift; sourceTree = "<group>"; };
+		529CB21A1AA2CFDE0069C551 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				529CB1FA1AA2CFC10069C551 /* AppDelegate.swift */,
 				529CB1FC1AA2CFC10069C551 /* ViewController.swift */,
+				529CB21A1AA2CFDE0069C551 /* NotificationController.swift */,
 				529CB1FE1AA2CFC10069C551 /* Main.storyboard */,
 				529CB2011AA2CFC10069C551 /* Images.xcassets */,
 				529CB2031AA2CFC10069C551 /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529CB21B1AA2CFDE0069C551 /* NotificationController.swift in Sources */,
 				529CB1FD1AA2CFC10069C551 /* ViewController.swift in Sources */,
 				529CB1FB1AA2CFC10069C551 /* AppDelegate.swift in Sources */,
 			);
