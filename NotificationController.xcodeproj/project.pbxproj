@@ -37,7 +37,7 @@
 		529CB20A1AA2CFC10069C551 /* NotificationControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		529CB20F1AA2CFC10069C551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		529CB2101AA2CFC10069C551 /* NotificationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationControllerTests.swift; sourceTree = "<group>"; };
-		529CB21A1AA2CFDE0069C551 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		529CB21A1AA2CFDE0069C551 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationController.swift; path = ../Source/NotificationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +411,7 @@
 				529CB2161AA2CFC10069C551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		529CB2171AA2CFC10069C551 /* Build configuration list for PBXNativeTarget "NotificationControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				529CB2191AA2CFC10069C551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
