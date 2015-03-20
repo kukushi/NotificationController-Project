@@ -11,31 +11,24 @@ Fetures include:
 ## Usage
 
 ```
-// use Block
+// with closure
 notificationController.observe(notificationName, object: nil) { (notification) -> Void in
     // do something...
 }
 
-// use selector is not current supported
+// selector way gone with perfromWithSelector:
 
 ```
 
 This is the complete example. The removal of observer will be done when controller is deallocated.
 
-## 
+##  NSObject Category
 
-
-NSObject Category
-
-A NSObject Category is provided to give you direct access of controller.
-
-[self.notificationController observeNotification:notificationName object:nil block:^(NSNotification *notification) {
-    // Do something
-}];
+A NSObject Category is provided to give you direct access of controller show as above.
 
 ## Requirements
 
-NotificationController using ARC and weak Collections. it requires:
+NotificationController using ARC and weak Collections. It requires:
 
 * iOS 6 or later.
 * OS X 10.7 or later.
