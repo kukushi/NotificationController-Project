@@ -32,6 +32,7 @@ public class NotificationController: NSObject {
     private let observer: NSObject!
     private var blockInfos = Set<NotificationInfo>()
     private var selectorInfos = Set<NotificationInfo>()
+    private var lock = OS_SPINLOCK_INIT
     
     private var DefaultCenter: NSNotificationCenter {
         return NSNotificationCenter.defaultCenter()
@@ -54,7 +55,9 @@ public class NotificationController: NSObject {
         
         let info = NotificationInfo(observer: observer as! NSObject, name: notification, object: object)
         
-        blockInfos.insert(info)
+        with {
+            self.blockInfos.insert(info)
+        }
         
     }
     
@@ -72,17 +75,20 @@ public class NotificationController: NSObject {
     public func unobserve(notification: String?, object: NSObject? = nil) {
         var deadInfos = Set<NotificationInfo>()
         
-        for info in blockInfos {
-            if info.name == notification && info.object == object {
-                DefaultCenter.removeObserver(info.observer, name: info.name, object: info.object)
+        with {
+            for info in self.blockInfos {
+                if info.name == notification && info.object == object {
+                    self.DefaultCenter.removeObserver(info.observer, name: info.name, object: info.object)
+                }
+                
+                deadInfos.insert(info)
             }
             
-            deadInfos.insert(info)
+            for info in deadInfos {
+                self.blockInfos.remove(info)
+            }
         }
         
-        for info in deadInfos {
-            blockInfos.remove(info)
-        }
     }
     
     public func unobserveAll() {
@@ -91,7 +97,17 @@ public class NotificationController: NSObject {
             DefaultCenter.removeObserver(info.observer, name: info.name, object: info.object)
         }
         
-        self.blockInfos.removeAll(keepCapacity: false)
+        with {
+            self.blockInfos.removeAll(keepCapacity: false)
+        }
+    }
+    
+    // MARK: Lock
+    
+    private func with(closure: Void -> Void) {
+        OSSpinLockLock(&lock)
+        closure()
+        OSSpinLockUnlock(&lock)
     }
 }
 
