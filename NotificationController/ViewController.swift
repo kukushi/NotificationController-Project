@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         NSNotificationCenter.defaultCenter().postNotificationName("cool", object: nil)
         println(shit)
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

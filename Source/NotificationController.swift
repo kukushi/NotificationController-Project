@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 kukushi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 private var notificationControllerAssociationKey: UInt8 = 0
 
@@ -57,6 +57,17 @@ public class NotificationController: NSObject {
         blockInfos.insert(info)
         
     }
+    
+    // MARK: Observe with Selector
+    
+//    public func observe(notification: String?, object: NSObject? = nil, selector: Selector) {
+//        DefaultCenter.addObserver(self, selector: "notificationReceived:", name: notification, object: object)
+//        let notificationInfo = NotificationInfo(observer: self.observer, name: notification, selector: selector)
+//        selectorInfos.insert(notificationInfo)
+//    }
+    
+    
+    // MARK: Unobserve
     
     public func unobserve(notification: String?, object: NSObject? = nil) {
         var deadInfos = Set<NotificationInfo>()
