@@ -130,10 +130,5 @@ private struct NotificationInfo: Hashable {
 }
 
 private func ==(lhs: NotificationInfo, rhs: NotificationInfo) -> Bool {
-    if lhs == rhs {
-        return true
-    }
-    else {
-        return lhs.name == rhs.name
-    }
+    return lhs.name == rhs.name && lhs.observer == rhs.observer
 }
