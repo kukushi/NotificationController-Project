@@ -13,11 +13,11 @@ xcuserdata
 *.xccheckout
 *.moved-aside
 DerivedData
-xcshareddata/
+# xcshareddata/
 *.hmap
 *.ipa
 *.xcuserstate
-*.xccheckout
+.xccheckout
 
 # AppCode
 #
