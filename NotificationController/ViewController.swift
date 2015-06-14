@@ -9,18 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var shit = 1
+    var count = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         notificationController.observe("cool", object: nil) { (notification) -> Void in
-            self.shit = 2;
+            self.count = 2;
         }
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         NSNotificationCenter.defaultCenter().postNotificationName("cool", object: nil)
-        println(shit)
+        print(count)
     }
     
 

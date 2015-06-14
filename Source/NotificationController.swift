@@ -21,7 +21,7 @@ public extension NSObject {
             return controller
         }
         set(newValue) {
-            objc_setAssociatedObject(self, &notificationControllerAssociationKey, newValue, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
+            objc_setAssociatedObject(self, &notificationControllerAssociationKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
 }
